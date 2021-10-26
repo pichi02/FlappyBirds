@@ -50,6 +50,7 @@ namespace app
 			//FrameTimeCounter
 			timer = GetFrameTime();
 		}
+		
 
 		void UpdatePlayer()
 		{

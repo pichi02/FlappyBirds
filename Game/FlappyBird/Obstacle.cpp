@@ -11,13 +11,13 @@ namespace app
 {
 	namespace obstacle
 	{
-		static const int colGap = 150;
+		static const int colGap = 250;
 		static const int colSpeed = 300;
 		static const int birdGap = 215;
 		static const int minRand = 0;
 		static const int maxRand = 250;
 
-		static const int totalCols = 8;
+		static const int totalCols = 5;
 		Column columnsUp[totalCols];
 		Column columnsDown[totalCols];
 		static int random;
@@ -100,11 +100,20 @@ namespace app
 					{
 						// recicle up
 						columnsUp[i].position.y = 0 - random;
-						columnsUp[i].position.x = GetScreenWidth() + colGap * 3;
+						if (i == 0)
+						{
+							columnsUp[i].position.x = columnsUp[totalCols - 1].position.x + colGap;
+
+						}
+						else
+						{
+							columnsUp[i].position.x = columnsUp[i - 1].position.x + colGap;
+						}
 
 						// recicle down
 						columnsDown[i].position.y = columnsUp[i].position.y + columnsUp[i].texture.height + birdGap;
-						columnsDown[i].position.x = GetScreenWidth() + colGap * 3;
+						columnsDown[i].position.x = columnsUp[i].position.x;
+						
 					}
 
 					columnsDown[i].destRec = { columnsDown[i].position.x, columnsDown[i].position.y, (float)columnsDown[i].texture.width,(float)columnsDown[i].texture.height };
