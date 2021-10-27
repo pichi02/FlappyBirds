@@ -90,6 +90,7 @@ namespace app
 				if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
 				{
 					currentScreen = MENU;
+					isMultiplayer = false;
 					InitMenu();
 					ResetValues();
 					//UnloadGameplay();

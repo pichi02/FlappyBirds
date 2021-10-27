@@ -10,8 +10,8 @@ namespace app
 {
 	namespace menu
 	{
-		static char text1[] = "JUGAR";
-		static char text2[] = "SONIDO";
+		static char text1[] = "1 JUGADOR";
+		static char text2[] = "2 JUGADORES";
 		static char text3[] = "CREDITOS";
 		static char text4[] = "SALIR";
 		static char text5[] = "V 0.2";
@@ -48,6 +48,8 @@ namespace app
 		static Texture2D menuImageTexture;
 		static float scaleBackground;
 
+		extern bool isMultiplayer = false;
+
 		void InitMenu()
 		{
 			menuImage = LoadImage("../res/backgroundMenu.png");
@@ -74,22 +76,22 @@ namespace app
 			colorRect4 = RED;
 
 			rect1.height = (GetScreenWidth() * 80) / scaleAux2;
-			rect1.width = (GetScreenWidth() * 255) / scaleAux2;
+			rect1.width = (GetScreenWidth() * 290) / scaleAux2;
 			rect1.x = halfScreenWidth - rect1.width / 2;
 			rect1.y = halfScreenHeight + GetScreenHeight() * 0.11;
 
 			rect2.height = (GetScreenWidth() * 80) / scaleAux2;
-			rect2.width = (GetScreenWidth() * 255) / scaleAux2;
+			rect2.width = (GetScreenWidth() * 290) / scaleAux2;
 			rect2.x = halfScreenWidth - rect1.width / 2;
 			rect2.y = halfScreenHeight + GetScreenHeight() * 0.21;
 
 			rect3.height = (GetScreenWidth() * 80) / scaleAux2;
-			rect3.width = (GetScreenWidth() * 255) / scaleAux2;
+			rect3.width = (GetScreenWidth() * 290) / scaleAux2;
 			rect3.x = halfScreenWidth - rect1.width / 2;
 			rect3.y = halfScreenHeight + GetScreenHeight() * 0.31;
 
 			rect4.height = (GetScreenWidth() * 80) / scaleAux2;
-			rect4.width = (GetScreenWidth() * 255) / scaleAux2;
+			rect4.width = (GetScreenWidth() * 290) / scaleAux2;
 			rect4.x = halfScreenWidth - rect1.width / 2;
 			rect4.y = halfScreenHeight + GetScreenHeight() * 0.01;
 
@@ -106,7 +108,9 @@ namespace app
 
 				if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
 				{
-					//mute = !mute;
+					isMultiplayer = true;
+					currentScreen = GAMEPLAY;
+					
 				}
 			}
 			else colorRect1.a = 255;

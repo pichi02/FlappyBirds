@@ -24,11 +24,18 @@ namespace app
 		};
 
 		extern Player player;
+		extern Player player2;
 
 		void InitPlayer();
+		void InitPlayer2();
 		void UpdatePlayer();
+		void UpdatePlayer2();
 		void DrawPlayer();
-		void UnloadPlayer();
+		void DrawPlayer2();
+		void UnloadPlayer(); 
+		void UnloadPlayer2();
 		void PlayerController();
+		void Player2Controller();
+
 	}
 }

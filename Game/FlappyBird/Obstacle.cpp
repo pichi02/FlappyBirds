@@ -3,9 +3,10 @@
 #include "App.h"
 #include "Player.h"
 #include "Gameplay.h"
-
+#include "Menu.h"
 using namespace app;
 using namespace gameplay;
+using namespace menu;
 
 namespace app
 {
@@ -85,15 +86,41 @@ namespace app
 					//Collision player
 					if (CheckCollisionCircleRec(player::player.position, player::player.radius, columnsUp[i].collider))
 					{
-						gameOver = true;
+						if (!isMultiplayer)
+						{
+							gameOver = true;
+						}
+						
 						player::player.isDead = true;
 					}
 
 					if (CheckCollisionCircleRec(player::player.position, player::player.radius, columnsDown[i].collider))
 					{
-						gameOver = true;
+						if (!isMultiplayer)
+						{
+							gameOver = true;
+						}
 						player::player.isDead = true;
 					}
+					if (isMultiplayer)
+					{
+						if (CheckCollisionCircleRec(player::player2.position, player::player2.radius, columnsUp[i].collider))
+						{
+							
+							player::player2.isDead = true;
+						}
+
+						if (CheckCollisionCircleRec(player::player2.position, player::player2.radius, columnsDown[i].collider))
+						{
+							
+							player::player2.isDead = true;
+						}
+						if (player::player.isDead&&player::player2.isDead)
+						{
+							gameOver = true;
+						}
+					}
+					
 
 					//Recicle
 					if (columnsUp[i].position.x + columnsUp[i].texture.width <= 0) 

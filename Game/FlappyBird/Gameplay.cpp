@@ -5,12 +5,13 @@
 #include "Player.h"
 #include "Obstacle.h"
 #include "Parallax.h"
+#include"Menu.h"
 
 using namespace app;
 using namespace player;
 using namespace obstacle;
 using namespace parallax;
-
+using namespace menu;
 namespace app
 {
 	namespace gameplay
@@ -40,6 +41,7 @@ namespace app
 
 			InitParallax();
 			InitPlayer();
+			InitPlayer2();
 			InitObstacle();
 		}
 
@@ -63,7 +65,20 @@ namespace app
 		static void Update()
 		{
 			UpdateParallax();
-			UpdatePlayer();
+			if (!gameOver)
+			{
+				UpdatePlayer();
+				if (isMultiplayer)
+				{
+					UpdatePlayer2();
+				}
+			}
+			else
+			{
+				currentScreen = GAMEOVER;
+				ResetValues();
+			}
+
 			UpdateObstacle();
 		}
 
@@ -79,6 +94,10 @@ namespace app
 
 			DrawParallax();
 			DrawPlayer();
+			if (isMultiplayer)
+			{
+				DrawPlayer2();
+			}
 			DrawObstacle();
 
 			DrawRectangleRec(btnPause1, colorRect);
@@ -89,6 +108,8 @@ namespace app
 		{
 			InitValues();
 			gameOver = false;
+
+
 		}
 
 		void UnloadGameplay()
