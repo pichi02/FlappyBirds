@@ -122,9 +122,10 @@ namespace app
 				if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
 				{
 					currentScreen = MENU;
+					UnloadGameplay();
 					InitMenu();
 					ResetValues();
-					UnloadGameplay();
+					
 				}
 			}
 			else colorRect1.a = 255;

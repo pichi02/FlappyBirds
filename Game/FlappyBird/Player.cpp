@@ -55,11 +55,11 @@ namespace app
 		}
 		void InitPlayer2()
 		{
-			player2.flappyImage = LoadImage("res/BirdHero.png");
+			player2.flappyImage = LoadImage("res/BirdHero2.png");
 
-			player2.flappyTexture = LoadTextureFromImage(player.flappyImage);
+			player2.flappyTexture = LoadTextureFromImage(player2.flappyImage);
 
-			player2.position = { (float)GetScreenWidth() / 2 - player.flappyTexture.width / 2 - 100, (float)GetScreenHeight() / 2 - player.flappyTexture.height / 2 };
+			player2.position = { (float)GetScreenWidth() / 2 - player2.flappyTexture.width / 2 - 100, (float)GetScreenHeight() / 2 - player2.flappyTexture.height / 2 };
 			player2.color = WHITE;
 			player2.acceleration = { 0,0 };
 			player2.rotation = 0;
@@ -68,11 +68,11 @@ namespace app
 			player2.radius = (float)(player.flappyTexture.width / 3) / 2 - 30;
 			player2.isDead = false;
 
-			player2.sourceRec = { 0.0f, 0.0f, (float)player.flappyTexture.width / 3, (float)player.flappyTexture.height };
+			player2.sourceRec = { 0.0f, 0.0f, (float)player2.flappyTexture.width / 3, (float)player2.flappyTexture.height };
 
-			player2.destRec = { player.position.x, player.position.y, (float)player.flappyTexture.width, (float)player.flappyTexture.height };
+			player2.destRec = { player2.position.x, player2.position.y, (float)player2.flappyTexture.width, (float)player2.flappyTexture.height };
 
-			player2.origin = { ((float)player.flappyTexture.width / 3) / 2, (float)player.flappyTexture.height / 2 };
+			player2.origin = { ((float)player2.flappyTexture.width / 3) / 2, (float)player2.flappyTexture.height / 2 };
 		}
 
 		void UpdatePlayer()
