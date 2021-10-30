@@ -51,6 +51,7 @@ namespace app
 			player.origin = { ((float)player.flappyTexture.width / 3) / 2, (float)player.flappyTexture.height / 2};
 
 			jump = LoadSound("res/birdjump.wav");
+			SetSoundVolume(jump, 0.2f);
 
 			//FrameTimeCounter
 			timer = GetFrameTime();

@@ -54,7 +54,7 @@ namespace app
 		void InitMenu()
 		{
 			menuMusic = LoadMusicStream("res/menuMusic.mp3");
-			menuImage = LoadImage("../res/backgroundMenu.png");
+			menuImage = LoadImage("res/menuTexture.png");
 			menuImageTexture = LoadTextureFromImage(menuImage);
 			halfScreenWidth = GetScreenWidth() / 2;
 			halfScreenHeight = GetScreenHeight() / 2;
@@ -160,7 +160,7 @@ namespace app
 		void DrawMenu()
 		{
 			ClearBackground(WHITE);
-			DrawTextureEx(menuImageTexture, { 0,0 }, 0, scaleBackground, WHITE);
+			DrawTextureEx(menuImageTexture, { 0,0 }, 0,GetScreenWidth() / GetScreenHeight(), WHITE);
 			DrawRectangleRec(rect1, colorRect1);
 			DrawRectangleRec(rect2, colorRect2);
 			DrawRectangleRec(rect3, colorRect3);
