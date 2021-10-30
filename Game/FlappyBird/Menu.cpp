@@ -44,6 +44,7 @@ namespace app
 		static int halfScreenWidth = 0;
 		static int halfScreenHeight = 0;
 
+		Music menuMusic;
 		static Image menuImage;
 		static Texture2D menuImageTexture;
 		static float scaleBackground;
@@ -52,6 +53,7 @@ namespace app
 
 		void InitMenu()
 		{
+			menuMusic = LoadMusicStream("res/menuMusic.mp3");
 			menuImage = LoadImage("../res/backgroundMenu.png");
 			menuImageTexture = LoadTextureFromImage(menuImage);
 			halfScreenWidth = GetScreenWidth() / 2;
@@ -100,6 +102,9 @@ namespace app
 
 		void UpdateMenu()
 		{
+			PlayMusicStream(menuMusic);
+			UpdateMusicStream(menuMusic);
+			
 			mousePoint = GetMousePosition();
 
 			if (CheckCollisionPointRec(mousePoint, rect1))
@@ -171,6 +176,7 @@ namespace app
 		{
 			UnloadTexture(menuImageTexture);
 			UnloadImage(menuImage);
+			
 		}
 
 	}

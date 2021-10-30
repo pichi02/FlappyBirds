@@ -21,7 +21,7 @@ namespace app
 
 		float delayTime = 0.1f;
 		int currentFrame = 0;
-
+		static Sound jump;
 		int gravity = 2000;
 		int playerOnClickRotation = -45;
 		int gravityRotation = 250;
@@ -49,6 +49,8 @@ namespace app
 			player.destRec = { player.position.x, player.position.y, (float)player.flappyTexture.width, (float)player.flappyTexture.height };
 
 			player.origin = { ((float)player.flappyTexture.width / 3) / 2, (float)player.flappyTexture.height / 2};
+
+			jump = LoadSound("res/birdjump.wav");
 
 			//FrameTimeCounter
 			timer = GetFrameTime();
@@ -118,6 +120,7 @@ namespace app
 			{
 				if (player.position.y >= player.flappyTexture.height)
 				{
+					PlaySound(jump);
 					player.rotation = playerOnClickRotation;
 					player.speed.y = playerSpeed;
 
@@ -185,6 +188,7 @@ namespace app
 		{
 			if (IsKeyPressed(KEY_UP) && !player2.isDead)
 			{
+				PlaySound(jump);
 				if (player2.position.y >= player2.flappyTexture.height)
 				{
 					player2.rotation = playerOnClickRotation;

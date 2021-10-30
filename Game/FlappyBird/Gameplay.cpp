@@ -38,6 +38,8 @@ namespace app
 
 		void InitValues()
 		{
+			InitAudioDevice();
+
 			clock = 0;
 			p1TextPosY = (GetScreenHeight() / 100) * 40;
 			p1TextPosX = (GetScreenWidth() / 100) * 2;
