@@ -116,6 +116,10 @@
       <AdditionalDependencies>raylibdll.lib; winmm.lib</AdditionalDependencies>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(SolutionDir)/lib/raylib.dll" "$(Solution Dir)/Game/Release"
+xcopy "$(SolutionDir)/lib/raylib.dll" "$(Solution Dir)/Game/Debug"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
