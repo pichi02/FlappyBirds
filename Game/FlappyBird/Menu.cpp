@@ -15,6 +15,7 @@ namespace app
 		static char text3[] = "CREDITOS";
 		static char text4[] = "SALIR";
 		static char text5[] = "V 0.3";
+		static char gameTitle[] = "FLAPICH BIRD";
 		static int sizeText2 = 0;
 		static int sizeText3 = 0;
 		static int text1PositionX = 0;
@@ -27,6 +28,10 @@ namespace app
 		static int text4PositionY = 0;
 		static int text5PositionX = 0;
 		static int text5PositionY = 0;
+		static int titlePosX = 0;
+		static int titlePosY = 0;
+		static int titleTextSize = 0;
+
 		static Vector2 mousePoint;
 		static Rectangle rect1;
 		static Rectangle rect2;
@@ -61,6 +66,7 @@ namespace app
 
 			sizeText2 = (GetScreenWidth() * 20) / scaleAux1;
 			sizeText3 = (GetScreenWidth() * 15) / scaleAux1;
+			titleTextSize= (GetScreenWidth() * 50) / scaleAux1;
 			text1PositionX = halfScreenWidth - MeasureText(text1, sizeText2) / 2;
 			text1PositionY = halfScreenHeight + GetScreenHeight() * 0.0333333;
 			text2PositionX = halfScreenWidth - MeasureText(text2, sizeText2) / 2;
@@ -71,6 +77,8 @@ namespace app
 			text4PositionY = halfScreenHeight + GetScreenHeight() * 0.3333333;
 			text5PositionX = GetScreenWidth() * 0.05;
 			text5PositionY = GetScreenHeight() * 0.95;
+			titlePosX = halfScreenWidth - MeasureText(gameTitle, titleTextSize) / 2;
+			titlePosY = GetScreenHeight()/100 * 20;
 
 			colorRect1 = RED;
 			colorRect2 = RED;
@@ -169,6 +177,7 @@ namespace app
 			DrawText(text3, text3PositionX, text3PositionY, sizeText2, BLACK);
 			DrawText(text4, text4PositionX, text4PositionY, sizeText2, BLACK);
 			DrawText(text5, text5PositionX, text5PositionY, sizeText2, BLACK);
+			DrawText(gameTitle, titlePosX, titlePosY, titleTextSize, WHITE);
 		}
 
 		void UnloadMenu()

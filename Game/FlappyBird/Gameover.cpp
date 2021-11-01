@@ -14,7 +14,7 @@ namespace app
 {
 	namespace gameover
 	{
-		static char text1[] = "Perdiste :(";
+		static char text1[] = "GAME OVER";
 		static char text3[] = "JUGAR DE NUEVO";
 		static char text4[] = "MENU";
 		static int text1PositionX = 0;
@@ -104,7 +104,7 @@ namespace app
 			ClearBackground(BLACK);
 			DrawRectangleRec(rect1, colorRect1);
 			DrawRectangleRec(rect2, colorRect2);
-			DrawText(text1, text1PositionX, text1PositionY, sizeText2, BLACK);
+			DrawText(text1, text1PositionX, text1PositionY, sizeText1, WHITE);
 			DrawText(text3, text3PositionX, text3PositionY, sizeText2, BLACK);
 			DrawText(text4, text4PositionX, text4PositionY, sizeText2, BLACK);
 		}

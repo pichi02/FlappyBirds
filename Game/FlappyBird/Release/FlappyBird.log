@@ -1,13 +1,1 @@
-﻿  Player.cpp
-C:\Users\lucas\Documents\GitHub\Flappy Birds\Game\FlappyBird\Player.cpp(125,24): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\lucas\Documents\GitHub\Flappy Birds\Game\FlappyBird\Player.cpp(130,47): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\lucas\Documents\GitHub\Flappy Birds\Game\FlappyBird\Player.cpp(181,42): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\lucas\Documents\GitHub\Flappy Birds\Game\FlappyBird\Player.cpp(195,25): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\lucas\Documents\GitHub\Flappy Birds\Game\FlappyBird\Player.cpp(200,49): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\lucas\Documents\GitHub\Flappy Birds\Game\FlappyBird\Player.cpp(248,43): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-  Generando código
-  5 of 43 functions (11.6%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
-  Generación de código finalizada
-  FlappyBird.vcxproj -> C:\Users\lucas\Documents\GitHub\Flappy Birds\Game\Release\FlappyBird.exe
+﻿  FlappyBird.vcxproj -> C:\Users\lucas\Documents\GitHub\Flappy Birds\Game\Release\FlappyBird.exe

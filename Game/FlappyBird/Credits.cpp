@@ -54,17 +54,17 @@ namespace app
 			halfScreen = GetScreenWidth() / 2;
 
 			textPositionX = halfScreen - MeasureText(text1, sizeText) / 2;
-			textPositionY = GetScreenHeight() * 0.13;
+			textPositionY = GetScreenHeight() * 0.21;
 			text4PositionX = halfScreen - MeasureText(text4, sizeText2) / 2;
 			text4PositionY = GetScreenHeight() * 0.80;
 			text5PositionX = halfScreen - MeasureText(text5, sizeText) / 2;
-			text5PositionY = GetScreenHeight() * 0.05;
+			text5PositionY = GetScreenHeight() * 0.13;
 			text6PositionX = halfScreen - MeasureText(text6, sizeText) / 2;
-			text6PositionY = GetScreenHeight() * 0.21;
+			text6PositionY = GetScreenHeight() * 0.29;
 			text7PositionX = halfScreen - MeasureText(text7, sizeText) / 2;
-			text7PositionY = GetScreenHeight() * 0.29;
+			text7PositionY = GetScreenHeight() * 0.37;
 			text8PositionX = halfScreen - MeasureText(text8, sizeText) / 2;
-			text8PositionY = GetScreenHeight() * 0.37;
+			text8PositionY = GetScreenHeight() * 0.45;
 
 			colorRect1 = RED;
 
