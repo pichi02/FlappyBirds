@@ -22,6 +22,7 @@ namespace app
 {
 	static int screenWidth = 800;
 	static int screenHeight = 600;
+	Music music;
 
 	bool exit = false;
 
@@ -36,22 +37,29 @@ namespace app
 		InitCredits();
 		InitGameover();
 		InitPause();
+		music = LoadMusicStream("res/menuMusic.mp3");
 	}
 
 	static void UpdateGame()
 	{
+		PlayMusicStream(music);
 		switch (currentScreen)
 		{
 		case MENU:
+			
+			UpdateMusicStream(music);
 			UpdateMenu();
 			break;
 		case GAMEPLAY:
 			UpdateFrame();
+			StopMusicStream(music);
 			break;
 		case GAMEOVER:
 			UpdateGameOver();
 			break;
 		case CREDITS:
+			
+			UpdateMusicStream(music);
 			UpdateCredits();
 			break;
 		case PAUSE:

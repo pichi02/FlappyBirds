@@ -1,5 +1,5 @@
 #pragma once
-
+#include"raylib.h"
 namespace app
 {
 	namespace menu
@@ -9,5 +9,6 @@ namespace app
 		void DrawMenu();
 		void UnloadMenu();
 		extern bool isMultiplayer;
+		
 	}
 }

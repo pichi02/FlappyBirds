@@ -41,7 +41,7 @@ namespace app
 			InitAudioDevice();
 
 			clock = 0;
-			p1TextPosY = (GetScreenHeight() / 100) * 40;
+			p1TextPosY = (GetScreenHeight() / 100) * 2;
 			p1TextPosX = (GetScreenWidth() / 100) * 2;
 			p1ControllerTextX = p1TextPosX;
 			p1ControllerTextY = p1TextPosY + (GetScreenHeight() / 100) * 4;
@@ -80,6 +80,7 @@ namespace app
 			if (CheckCollisionPointRec(mousePoint, btnPause2))
 			{
 				if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) currentScreen = PAUSE;
+				colorRect.a = 120;
 			}
 		}
 
