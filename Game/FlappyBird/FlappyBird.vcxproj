@@ -117,8 +117,8 @@
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(SolutionDir)/lib/raylib.dll" "$(Solution Dir)/Game/Release"
-xcopy "$(SolutionDir)/lib/raylib.dll" "$(Solution Dir)/Game/Debug"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

@@ -14,7 +14,7 @@ namespace app
 		static char text2[] = "2 JUGADORES";
 		static char text3[] = "CREDITOS";
 		static char text4[] = "SALIR";
-		static char text5[] = "V 0.3";
+		static char text5[] = "V 1.0";
 		static char gameTitle[] = "FLAPICH BIRD";
 		static int sizeText2 = 0;
 		static int sizeText3 = 0;
@@ -176,7 +176,7 @@ namespace app
 			DrawText(text2, text2PositionX, text2PositionY, sizeText2, BLACK);
 			DrawText(text3, text3PositionX, text3PositionY, sizeText2, BLACK);
 			DrawText(text4, text4PositionX, text4PositionY, sizeText2, BLACK);
-			DrawText(text5, text5PositionX, text5PositionY, sizeText2, BLACK);
+			DrawText(text5, text5PositionX, text5PositionY, sizeText2, WHITE);
 			DrawText(gameTitle, titlePosX, titlePosY, titleTextSize, WHITE);
 		}
 
